@@ -54,7 +54,7 @@ const SearchBar = ({
           />
         </FormControl>
       </WrapItem>
-      <WrapItem>
+      <WrapItem w={170}>
         <Checkbox onChange={() => setType(!type)}>Full Time Only</Checkbox>
       </WrapItem>
       <WrapItem>

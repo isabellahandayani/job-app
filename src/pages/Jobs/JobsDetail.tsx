@@ -29,14 +29,15 @@ const JobsDetail = () => {
       <Flex
         width={"90%"}
         margin="auto"
-        boxShadow={"md"}
+        boxShadow={"lg"}
         p={10}
-        borderRadius={10}
+        borderRadius={20}
         mt={10}
+        mb={10}
       >
         <Box width={"60%"}>
           <Box>
-            <Text>
+            <Text color="grey">
               {detail.type} / {detail.location}
             </Text>
             <Heading>{detail.title}</Heading>
@@ -45,8 +46,8 @@ const JobsDetail = () => {
         </Box>
         <Spacer />
         <Box width={"30%"} p={4}>
-          <Box boxShadow={"md"}>
-            <Heading as="h3" size="md" p={2} borderRadius={5}>
+          <Box boxShadow={"lg"} borderRadius={10} p={4}>
+            <Heading as="h3" size="md" p={2}>
               {detail.company}
             </Heading>
             <Image
@@ -55,17 +56,17 @@ const JobsDetail = () => {
                 "https://skillz4kidzmartialarts.com/wp-content/uploads/2017/04/default-image.jpg"
               }
             />
-            <Box p={2}>
-              <Link p={2} href={detail.company_url} color="blue">
+            <Box mt={2}>
+              <Link href={detail.company_url} color="blue">
                 {detail.company_url}
               </Link>
             </Box>
           </Box>
-          <Box mt={4} p={4} boxShadow={"md"} borderRadius={5}>
-            <Heading as="h3" size="md">
+          <Box mt={4} p={4} boxShadow={"lg"} borderRadius={20}>
+            <Heading as="h3" size="md" borderBottom="1px" p={2}>
               How to Apply
             </Heading>
-            <Text>{parse(detail.how_to_apply)}</Text>
+            <Text p={2}>{parse(detail.how_to_apply)}</Text>
           </Box>
         </Box>
       </Flex>

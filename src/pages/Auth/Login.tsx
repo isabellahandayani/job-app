@@ -13,7 +13,7 @@ const Login = () => {
       minH="90vh"
       flex={1}
     >
-      <Box boxShadow="md" p={10}>
+      <Box boxShadow="lg" p={10}>
         <Center>
           <Heading size="lg">Login</Heading>
         </Center>

@@ -1,59 +1,39 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+# Job App
 
-## Available Scripts
+Front End Developer Test
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+Use the package manager [yarn](https://yarnpkg.com/) to install.
 
-Runs the app in the development mode.<br /> Open
-[http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+yarn install
+```
 
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+## Usage
 
-### `yarn test`
+```javascript
+yarn build
 
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+serve -s build
+```
 
-### `yarn build`
+## Pages
+1. Login
 
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
+	User is allowed to login using Google Account
+	![messageImage_1650653719349](https://user-images.githubusercontent.com/63598464/164777034-1612f5be-b4e5-49ec-b8e1-bf3a7faff898.jpg)
 
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
+2. Job List
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+	a. The job list
+	![messageImage_1650654976928](https://user-images.githubusercontent.com/63598464/164779704-a87511cc-297e-4db4-95f2-290af40c9950.jpg)
 
-### `yarn eject`
+	b. Search
+	![messageImage_1650655107824](https://user-images.githubusercontent.com/63598464/164779992-14d2b9e7-5c2e-48c6-81f0-1134951e6048.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+	c. Pagination
+	![messageImage_1650655162262](https://user-images.githubusercontent.com/63598464/164780081-06345f20-4475-4dfa-ae11-939647b34a64.jpg)
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
-
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Job Details
+	![messageImage_1650655202928](https://user-images.githubusercontent.com/63598464/164780201-5b94c1a2-f001-481a-910c-47b228dabeb3.jpg)
