@@ -17,12 +17,17 @@ const JobsList = () => {
   const fetchList = async () => {
     let data = await getList({
       location: location,
+      description: desc,
+      type: type,
     });
     setList(data);
   };
 
   const handleClick = () => {
-    setSearch(true);
+    if (desc || location || type) {
+      setSearch(true);
+    } 
+    
     fetchList();
   };
 
@@ -40,11 +45,11 @@ const JobsList = () => {
           } else {
             setMoreItem(true);
           }
-          setList([...list, ...res]);
+          const newList = list.concat(res);
+          setList(newList);
           setPage(page + 1);
         })
-        .catch((e) => {
-          console.log(e);
+        .catch((_) => {
           setMoreItem(false);
         });
     }, 1500);
