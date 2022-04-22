@@ -1,5 +1,5 @@
 import { Box, Heading, Stack, Spinner, Center } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroller";
 import JobCard from "../../components/JobCard";
 import SearchBar from "../../components/SearchBar";
@@ -49,6 +49,10 @@ const JobsList = () => {
         });
     }, 1500);
   };
+
+  useEffect(() => {
+    document.title = "Github Jobs - Jobs List";
+  }, []);
 
   return (
     <Box width={"80%"} margin="auto">

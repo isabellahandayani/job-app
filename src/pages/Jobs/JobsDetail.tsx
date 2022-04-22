@@ -17,6 +17,7 @@ const JobsDetail = () => {
   const [detail, setDetail] = useState<any>(null);
 
   useEffect(() => {
+    document.title = "Github Jobs - Detail";
     const fetchDetail = async () => {
       let data = await getDetail(id);
       setDetail(data);
