@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Login from "./pages/Auth/Login";
 import JobsDetail from "./pages/Jobs/JobsDetail";
-import JobsList from "./pages/Jobs/JobstList";
+import JobsList from "./pages/Jobs/JobsList";
 import { auth } from "./service/Firebase";
 
 export const App = () => {
