@@ -6,10 +6,11 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Login from "./pages/Auth/Login";
 import JobsDetail from "./pages/Jobs/JobsDetail";
 import JobsList from "./pages/Jobs/JobsList";
-import { auth } from "./service/Firebase";
+import { auth } from "./service/FirebaseServices";
 
 export const App = () => {
   const [loggedIn, setLoggedIn] = useState<boolean>(false);
@@ -25,12 +26,14 @@ export const App = () => {
     <ChakraProvider theme={theme}>
       <Router>
         {loggedIn ? (
-          <Routes>
-            <Route path="/detail/:id" element={<JobsDetail />} />
-            <Route path="/list" element={<JobsList />} />
-            <Route path="/" element={<Navigate replace to="/list" />} />
-            <Route path="*" element={<Navigate replace to="/list" />} />
-          </Routes>
+          <Navbar>
+            <Routes>
+              <Route path="/detail/:id" element={<JobsDetail />} />
+              <Route path="/list" element={<JobsList />} />
+              <Route path="/" element={<Navigate replace to="/list" />} />
+              <Route path="*" element={<Navigate replace to="/list" />} />
+            </Routes>
+          </Navbar>
         ) : (
           <Routes>
             <Route path="/" element={<Login />} />

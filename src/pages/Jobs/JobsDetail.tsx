@@ -32,7 +32,7 @@ const JobsDetail = () => {
         boxShadow={"md"}
         p={10}
         borderRadius={10}
-        mt={2}
+        mt={10}
       >
         <Box width={"60%"}>
           <Box>
@@ -56,7 +56,9 @@ const JobsDetail = () => {
               }
             />
             <Box p={2}>
-              <Link p={2}>{detail.company_url}</Link>
+              <Link p={2} href={detail.company_url} color="blue">
+                {detail.company_url}
+              </Link>
             </Box>
           </Box>
           <Box mt={4} p={4} boxShadow={"md"} borderRadius={5}>

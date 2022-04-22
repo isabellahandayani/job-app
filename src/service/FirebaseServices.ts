@@ -5,3 +5,7 @@ import { FIREBASE_CONFIG } from "../const";
 initializeApp(FIREBASE_CONFIG);
 
 export const auth = getAuth();
+
+export const logout = () => {
+	auth.signOut();
+};

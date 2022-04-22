@@ -13,6 +13,5 @@ export const FIREBASE_CONFIG = {
 
 export const UI_CONFIG = {
   signInFlow: "popup",
-  signInSuccessUrl: "/list",
   signInOptions: [GoogleAuthProvider.PROVIDER_ID],
 };

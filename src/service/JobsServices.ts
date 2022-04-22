@@ -5,7 +5,6 @@ export const getDetail = async (id: any) => {
     method: "GET",
   })
     .then((res) => res.json())
-    .then((data) => data.filter((item: any) => item));
 };
 
 export const getList = async (params?: any) => {

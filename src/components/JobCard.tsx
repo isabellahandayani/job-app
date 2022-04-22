@@ -1,7 +1,9 @@
 import { Flex, Text, Box, Spacer } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import TimeAgo from "react-timeago";
 
 interface IJobs {
+  id: string;
   title: string;
   company: string;
   location: string;
@@ -9,21 +11,23 @@ interface IJobs {
   created_at: string;
 }
 
-const JobCard = ({ title, company, location, type, created_at }: IJobs) => {
+const JobCard = ({ id, title, company, location, type, created_at }: IJobs) => {
   return (
-    <Flex p={2}>
-      <Box>
-        <Text>{title}</Text>
-        <Text>
-          {company} - {type}
-        </Text>
-      </Box>
-      <Spacer />
-      <Box textAlign={"right"}>
-        <Text>{location}</Text>
-        <TimeAgo date={created_at} />
-      </Box>
-    </Flex>
+    <Link to={`/detail/${id}`}>
+      <Flex p={2}>
+        <Box>
+          <Text>{title}</Text>
+          <Text>
+            {company} - {type}
+          </Text>
+        </Box>
+        <Spacer />
+        <Box textAlign={"right"}>
+          <Text>{location}</Text>
+          <TimeAgo date={created_at} />
+        </Box>
+      </Flex>
+    </Link>
   );
 };
 

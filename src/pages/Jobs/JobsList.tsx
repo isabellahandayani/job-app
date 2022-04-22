@@ -1,5 +1,5 @@
 import { Box, Heading, Stack, Spinner, Center } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroller";
 import JobCard from "../../components/JobCard";
 import SearchBar from "../../components/SearchBar";
@@ -26,14 +26,9 @@ const JobsList = () => {
   const handleClick = () => {
     if (desc || location || type) {
       setSearch(true);
-    } 
-    
+    }
     fetchList();
   };
-
-  useEffect(() => {
-    fetchList();
-  }, []);
 
   const loadPage = () => {
     setTimeout(() => {

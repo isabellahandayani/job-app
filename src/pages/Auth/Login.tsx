@@ -1,7 +1,7 @@
-import { Heading, Flex } from "@chakra-ui/react";
+import { Heading, Flex, Box, Center } from "@chakra-ui/react";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { UI_CONFIG } from "../../const";
-import { auth } from "../../service/Firebase";
+import { auth } from "../../service/FirebaseServices";
 
 const Login = () => {
   return (
@@ -10,13 +10,15 @@ const Login = () => {
       justifyContent="center"
       w="30%"
       margin="auto"
-      p={4}
-      flexDir="column"
       minH="90vh"
       flex={1}
     >
-      <Heading size="lg">Login</Heading>
-      <StyledFirebaseAuth uiConfig={UI_CONFIG} firebaseAuth={auth} />
+      <Box boxShadow="md" p={10}>
+        <Center>
+          <Heading size="lg">Login</Heading>
+        </Center>
+        <StyledFirebaseAuth uiConfig={UI_CONFIG} firebaseAuth={auth} />
+      </Box>
     </Flex>
   );
 };
