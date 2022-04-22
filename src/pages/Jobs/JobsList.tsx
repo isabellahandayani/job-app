@@ -26,6 +26,8 @@ const JobsList = () => {
   const handleClick = () => {
     if (desc || location || type) {
       setSearch(true);
+    } else {
+      setSearch(false);
     }
     fetchList();
   };
@@ -36,6 +38,7 @@ const JobsList = () => {
         .then((res) => {
           if (res.status === 500) {
             setMoreItem(false);
+            setPage(1);
             return;
           } else {
             setMoreItem(true);
@@ -46,6 +49,7 @@ const JobsList = () => {
         })
         .catch((_) => {
           setMoreItem(false);
+          setPage(1);
         });
     }, 1500);
   };
@@ -75,7 +79,7 @@ const JobsList = () => {
           threshold={0}
           pageStart={0}
           loadMore={loadPage}
-          hasMore={moreItem}
+          hasMore={moreItem && !isSearch}
           loader={
             <Center>
               <Spinner />
