@@ -10,17 +10,19 @@ import {
 import { useEffect, useState } from "react";
 import parse from "html-react-parser";
 import { getDetail } from "../../service/JobsServices";
+import { useParams } from "react-router-dom";
 
 const JobsDetail = () => {
+  const { id } = useParams();
   const [detail, setDetail] = useState<any>(null);
 
-  const fetchDetail = async () => {
-    let data = await getDetail("32bf67e5-4971-47ce-985c-44b6b3860cdb");
-    setDetail(data);
-  };
   useEffect(() => {
+    const fetchDetail = async () => {
+      let data = await getDetail(id);
+      setDetail(data);
+    };
     fetchDetail();
-  }, []);
+  }, [id]);
 
   return (
     detail && (
