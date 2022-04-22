@@ -6,6 +6,4 @@ export const getDetail = async (id: any) => {
   }).then((res) => res.json());
 };
 
-export const getList = async (params: any) => {
-
-}
+export const getList = async (params: any) => {};
